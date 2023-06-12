@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 실습 1 - 9</title>
+    <style>
+      /* 스타일링된 리스트 스타일 */
+      * {
+        box-sizing: border-box;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: gray;
+        padding: 20px 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        display: inline;
+        margin-right: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        background-color: black;
+        color: white;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <h1>자기소개 PAGE</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./iframe/1-1.html" target="iframe-content">MBTI</a>
+        </li>
+        <li>
+          <a href="./iframe/1-2.html" target="iframe-content">프로필</a>
+        </li>
+        <li>
+          <a href="./iframe/1-3.html" target="iframe-content"
+            >개발직군을 선택하게 된 계기</a
+          >
+        </li>
+        <li>
+          <a href="./iframe/1-4.html" target="iframe-content"
+            >개발자로의 목표</a
+          >
+        </li>
+        <li>
+          <a href="./iframe/1-5.html" target="iframe-content">자신의 노력</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <iframe
+        src="./iframe/1-1.html"
+        frameborder="0"
+        style="width: 100%"
+        height="800px"
+        name="iframe-content"
+      ></iframe>
+    </div>
+    <footer
+      style="
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+      "
+    >
+      HI 😊
+    </footer>
+  </body>
+</html>
