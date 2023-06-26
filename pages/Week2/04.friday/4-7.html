@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 friday</title>
+  </head>
+  <body>
+    <div id="text"></div>
+    <div id="newText"></div>
+    <div id="text1"></div>
+    <div id="newText1"></div>
+    <script>
+      let text = "Please visit Microsoft!";
+      let newText = text.replace("Microsoft", "W3Schools");
+      let text1 = "Hello World";
+      let newText1 = text1.toUpperCase();
+
+      // text와 newText 값을 HTML로 출력하는 함수
+      function displayText() {
+        const textDiv = document.getElementById("text");
+        const newTextDiv = document.getElementById("newText");
+        const text1Div = document.getElementById("text1");
+        const newText1Div = document.getElementById("newText1");
+
+        textDiv.innerText = `Text: ${text}`;
+        newTextDiv.innerText = `New Text: ${newText}`;
+        text1Div.innerText = `Text: ${text1}`;
+        newText1Div.innerText = `New Text: ${newText1}`;
+      }
+
+      // 페이지가 로드된 후에 displayText 함수를 호출하여 값을 출력
+      window.onload = displayText;
+    </script>
+  </body>
+</html>

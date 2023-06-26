@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 friday</title>
+  </head>
+  <body>
+    <script>
+      const ironMan = {
+        aaa: "토니",
+        bbb: "스타크",
+        ccc: "아이언맨",
+      };
+      const { aaa, bbb, ccc } = ironMan;
+      console.log(aaa);
+      console.log(bbb);
+      console.log(ccc);
+
+      const onChange = (event) => {
+        const {
+          target: { value },
+        } = event;
+        console.log(value);
+      };
+    </script>
+  </body>
+</html>

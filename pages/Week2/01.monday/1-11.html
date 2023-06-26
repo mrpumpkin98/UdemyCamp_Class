@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 실습 1 - 11</title>
+    <script>
+      function search() {
+        var searchKeyword = document.getElementById("searchInput").value;
+        var url =
+          "https://www.goodchoice.kr/product/result?keyword=" +
+          encodeURIComponent(searchKeyword);
+        window.location.href = url;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>가고싶은 여행지를 검색해봐요</h1>
+    <form onsubmit="event.preventDefault(); search();">
+      가고싶은 도시 : <input type="text" id="searchInput" />
+      <button type="submit">검색</button>
+    </form>
+  </body>
+</html>

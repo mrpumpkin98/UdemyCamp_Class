@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+#aaa {
+  background-color: aqua;
+  width: 700px;
+  height: 500px;
+  z-index: 1;
+  position: relative;
+}
+#bbb {
+  background-color: bisque;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}

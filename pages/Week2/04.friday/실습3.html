@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습3</title>
+  </head>
+  <body>
+    <h1 style="font-size: 40px">[ JS - 실시간 시계 ]</h1>
+    <div id="time" style="font-size: 50px"></div>
+    <script>
+      function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // 시간, 분, 초를 2자리 숫자로 변환
+        hours = ("0" + hours).slice(-2);
+        minutes = ("0" + minutes).slice(-2);
+        seconds = ("0" + seconds).slice(-2);
+
+        // 시간 문자열 생성
+        var timeString = hours + "시" + minutes + "분" + seconds + "초";
+
+        // 시간 업데이트
+        document.getElementById("time").textContent = timeString;
+      }
+
+      // 페이지 로드 후 초기 시간 업데이트
+      updateTime();
+
+      // 1초마다 시간 업데이트
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>

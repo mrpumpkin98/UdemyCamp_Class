@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>실습4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #galleryZone {
+        text-align: center;
+        margin-top: 50px;
+      }
+      #galleryZone input[type="image"] {
+        margin: 0 8px;
+      }
+      button {
+        margin-top: 30px;
+        margin: 0px 50px;
+        width: 100px;
+      }
+    </style>
+    <script>
+      var images = [
+        "images/1.png",
+        "images/2.png",
+        "images/3.png",
+        "images/4.png",
+        "images/5.png",
+        "images/6.png",
+      ];
+      var num = 0;
+
+      function gallery(direct) {
+        if (direct) {
+          if (num === images.length - 1) return;
+          num++;
+        } else {
+          if (num === 0) return;
+          num--;
+        }
+
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src", images[num]);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="galleryZone">
+      <p>
+        <img
+          src="images/1.png"
+          id="photo"
+          alt=""
+          style="width: 300px; height: 300px"
+        />
+      </p>
+      <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 실습 1 - 13</title>
+    <style>
+      /* 스타일링된 리스트 스타일 */
+      * {
+        box-sizing: border-box;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding: 20px 10px;
+        border: 1px solid gold;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        display: inline;
+        margin-right: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        background-color: gold;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <h1>나의 페이지</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./1-11.html" target="iframe-content">야놀자 검색</a>
+        </li>
+        <li>
+          <a href="./iframe/1-2.html" target="iframe-content">프로필</a>
+        </li>
+        <li>
+          <a href="./iframe/1-1.html" target="iframe-content">MBTI</a>
+        </li>
+        <li>
+          <a href="./iframe/1-3.html" target="iframe-content"
+            >개발직군을 선택하게 된 계기</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <iframe
+        src="./1-11.html"
+        frameborder="0"
+        style="width: 100%"
+        height="800px"
+        name="iframe-content"
+      ></iframe>
+    </div>
+    <footer
+      style="
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+      "
+    >
+      HI 😊
+    </footer>
+  </body>
+</html>

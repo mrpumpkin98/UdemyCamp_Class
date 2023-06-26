@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습2</title>
+  </head>
+  <body>
+    <img
+      src="images/1.png"
+      alt="이미지"
+      id="image"
+      style="width: 350px; height: 350px; cursor: pointer"
+    />
+
+    <script>
+      var images = [
+        "images/1.png",
+        "images/2.png",
+        "images/3.png",
+        "images/4.png",
+        "images/5.jpeg",
+      ];
+
+      var imageElement = document.getElementById("image");
+
+      // 이미지 클릭 시 이벤트 핸들러
+      imageElement.addEventListener("click", function () {
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+        imageElement.src = randomImage;
+      });
+    </script>
+  </body>
+</html>

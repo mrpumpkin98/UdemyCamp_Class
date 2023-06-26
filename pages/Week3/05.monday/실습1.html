@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <script>
+      function addToCart(productName, productPrice) {
+        var cartDiv = document.getElementById("cart");
+        var cartItem = document.createElement("p");
+        cartItem.textContent = productName + " - " + productPrice + "원";
+        cartDiv.appendChild(cartItem);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <h2>사과</h2>
+        <p>1000</p>
+        <button onclick="addToCart('사과', '1000')">장바구니 담기</button>
+      </div>
+      <div>
+        <h2>바나나</h2>
+        <p>2000</p>
+        <button onclick="addToCart('바나나', '2000')">장바구니 담기</button>
+      </div>
+    </div>
+    <div>
+      <h1>장바구니</h1>
+      <div id="cart"></div>
+    </div>
+  </body>
+</html>

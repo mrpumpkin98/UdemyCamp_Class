@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+  </head>
+  <body>
+    <script>
+      let score = 60;
+      let money = 0;
+
+      score = prompt("점수");
+
+      if (score > 90) {
+        document.write("잘함");
+        money += 10000;
+      } else if (score > 50) {
+        document.write("굳");
+        money += 5000;
+      } else if (score > 10) {
+        document.write("엥");
+        money += 1000;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rebeccapurple;
+  padding: 10px 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  top: 47px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  border: 1px solid rebeccapurple;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+      .delete-button {
+        margin-left: 200px;
+      }
+    </style>
+    <script>
+      function addToMessage() {
+        let content = document.getElementById("content").value;
+        let message = document.getElementById("message");
+        let itemContainer = document.createElement("div");
+        let itemText = document.createElement("span");
+        let deleteButton = document.createElement("button");
+
+        itemText.textContent = content;
+        deleteButton.textContent = "삭제";
+        deleteButton.classList.add("delete-button");
+        deleteButton.onclick = function () {
+          message.removeChild(itemContainer);
+        };
+
+        itemContainer.appendChild(itemText);
+        itemContainer.appendChild(deleteButton);
+        message.appendChild(itemContainer);
+
+        document.getElementById("content").value = "";
+      }
+
+      function handleKeyPress(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          addToMessage();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <input
+      type="text"
+      id="content"
+      placeholder="메시지를 입력하세요"
+      onkeypress="handleKeyPress(event)"
+    />
+    <button onclick="addToMessage()">추가</button>
+    <div id="message"></div>
+  </body>
+</html>

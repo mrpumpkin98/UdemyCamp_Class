@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid rebeccapurple;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 4px;
+}

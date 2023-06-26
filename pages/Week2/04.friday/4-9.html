@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤔 friday</title>
+  </head>
+  <body>
+    <h1>counter</h1>
+    <
+    <h2 id="counter">0</h2>
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>>
+    <hr />
+  </body>
+  <script>
+    // "increase" 버튼 클릭 시 이벤트 핸들러
+    document.getElementById("increase").addEventListener("click", function () {
+      // "counter" 요소의 현재 값 가져오기
+      var counterElement = document.getElementById("counter");
+      var counterValue = parseInt(counterElement.textContent);
+
+      // 값 증가 후 다시 "counter"에 설정
+      counterValue += 1;
+      counterElement.textContent = counterValue;
+    });
+
+    // "decrease" 버튼 클릭 시 이벤트 핸들러
+    document.getElementById("decrease").addEventListener("click", function () {
+      // "counter" 요소의 현재 값 가져오기
+      var counterElement = document.getElementById("counter");
+      var counterValue = parseInt(counterElement.textContent);
+
+      // 값 감소 후 다시 "counter"에 설정
+      counterValue -= 1;
+      counterElement.textContent = counterValue;
+    });
+  </script>
+</html>
