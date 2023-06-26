@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎈  Experiences
+## 웅진X유데미-10주 완성! 프로젝트 캠프
+- **링크**
+    - [웅진X유데미](https://udemy.wjtb.co.kr/event/id/168)
+- **활동 기간**
+    - 2023.06.05 ~ 2023.08.11
+- **웅진X유데미-10주 완성! 프로젝트 캠프 1기**
+    - 기업의 현업 과제로 프로젝트 주제로 프로젝트 구상 및 기획
+    - 프로젝트 개발 및 디버깅  릴리즈
+    - 프로젝트 성과보고
+    - 6주간 React 역량강화 교육
+    - 4주간 프로젝트 진행
 
-## Getting Started
+# 💁‍♂️ Team10_exercise
+## 10팀 팀원명 | 블로그 | 실습 리파지토리 주소
 
-First, run the development server:
+* 김준현 | [블로그]( https://velog.io/@dorin) |
+* 손예림 | [블로그](https://iamyerimi.github.io) | [실습 리파지토리](https://github.com/iamyerimi/udemyProjectCamp/tree/main/week2/exercise)
+* 신재욱 | [블로그](https://velog.io/@sju4486) | [실습 리파지토리](https://github.com/mrpumpkin98/UdemyCamp_Class)
+* 이아현 | [블로그](https://velog.io/@pooh963) | [실습 리파지토리](https://github.com/pooh19228/udemy-project-camp.git)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# 📘  Learning record
+### 1주차
+- [웹 서비스 기획 1](https://velog.io/@sju4486/TIL-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%ED%9A%8D-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+- [웹 서비스 기획 2](https://velog.io/@sju4486/TIL-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%ED%9A%8D-2-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+- [웹 서비스 기획 3](https://velog.io/@sju4486/TIL-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%ED%9A%8D-3-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+### 2주차
+- [HTML](https://velog.io/@sju4486/HTML-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+- [CSS](https://velog.io/@sju4486/TIL-CSS-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+- [JavaScript](https://velog.io/@sju4486/TIL-JavaScript-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
+### 3주차
+- [React 1](https://velog.io/@sju4486/TIL-React-1-%EC%9B%85%EC%A7%84X%EC%9C%A0%EB%8D%B0%EB%AF%B8-%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8D%BC%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9CReact)
