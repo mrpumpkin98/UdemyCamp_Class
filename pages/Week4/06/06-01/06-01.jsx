@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { Modal } from "antd";
+import ReactStars from "react-stars";
+import * as S from "./index.style";
 
 export default function Weather() {
   const [movies, setMovies] = useState([]);
@@ -13,73 +15,15 @@ export default function Weather() {
     fetchMoviesData();
   }, []);
 
-  const Main = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px 0px;
-  `;
-
-  const Item = styled.div`
-    width: calc(25% - 20px);
-    text-align: center;
-  `;
-
-  const Img = styled.img`
-    cursor: pointer;
-    background-color: white;
-    object-fit: cover;
-    transition: border-color 0.3s, transform 0.3s; /* 테두리 색상 및 변화에 애니메이션 효과 추가 */
-    border: 2px solid transparent; /* 초기 테두리 설정 */
-    margin-top: 20px;
-    :hover {
-      transform: translateY(-10px); /* 위로 10px 이동하는 애니메이션 효과 */
-    }
-  `;
-
-  const Tie = styled.div`
-    display: flex;
-  `;
-
-  const TextTie = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  `;
-
-  const P1 = styled.p`
-    margin-top: 10px;
-  `;
-
-  const Button = styled.button`
-    margin-top: 10px;
-    cursor: pointer;
-    background-color: #1890ff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-top: 30px;
-    :hover {
-      background-color: #40a9ff;
-    }
-  `;
-
   const fetchMoviesData = async () => {
     try {
       const response = await fetch(
         `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year&api_key=${API_KEY}`
       );
       const data = await response.json();
-      console.log(data.data.page_number);
       setMovies(data.data.movies);
-    } catch (error) {
-      console.log(error);
-    }
+      console.log(data.data.movies[0].genres[0]);
+    } catch (error) {}
   };
 
   const handleMovieClick = (movie) => {
@@ -104,11 +48,13 @@ export default function Weather() {
     }
   };
 
+  const handleRatingChange = (newRating) => {};
+
   return (
-    <Main className="grid-container">
+    <S.Main className="grid-container">
       {movies.map((movie) => (
-        <Item key={movie.id} className="grid-item">
-          <Img
+        <S.Item key={movie.id} className="grid-item">
+          <S.Img
             src={movie.medium_cover_image}
             alt={movie.title}
             onError={(event) => {
@@ -116,7 +62,7 @@ export default function Weather() {
             }}
             onClick={() => handleMovieClick(movie)}
           />
-        </Item>
+        </S.Item>
       ))}
       {selectedMovie && (
         <Modal
@@ -125,20 +71,35 @@ export default function Weather() {
           footer={null}
           destroyOnClose
         >
-          <Tie>
+          <S.Tie>
             <img
               src={selectedMovie.medium_cover_image}
               alt={selectedMovie.title}
             />
-            <TextTie>
-              <P1>제목: {selectedMovie.title}</P1>
-              <P1>연도: {selectedMovie.year}</P1>
-              <P1>내용: {truncateSummary(selectedMovie.summary, 200)}</P1>
-              <Button onClick={handleMoreButtonClick}>더보기</Button>
-            </TextTie>
-          </Tie>
+            <S.TextTie>
+              <S.P1>제목 : {selectedMovie.title}</S.P1>
+              <S.P1>개봉일 : {selectedMovie.year}년</S.P1>
+              <S.P1>장르 : {selectedMovie.genres[0]}</S.P1>
+              <S.RateTie>
+                <ReactStars
+                  count={5}
+                  size={20}
+                  half={false}
+                  value={selectedMovie.rating / 2}
+                  emptyIcon={<i className="far fa-star"></i>}
+                  fullIcon={<i className="fa fa-star"></i>}
+                  onChange={handleRatingChange}
+                />
+                <S.P1 style={{ marginBottom: "11px", marginLeft: "10px" }}>
+                  {selectedMovie.rating} / 10
+                </S.P1>
+              </S.RateTie>
+              <S.P1>{truncateSummary(selectedMovie.summary, 150)}</S.P1>
+              <S.Button onClick={handleMoreButtonClick}>더보기</S.Button>
+            </S.TextTie>
+          </S.Tie>
         </Modal>
       )}
-    </Main>
+    </S.Main>
   );
 }
