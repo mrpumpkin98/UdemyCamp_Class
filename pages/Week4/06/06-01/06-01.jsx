@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { Modal } from "antd";
 import ReactStars from "react-stars";
-import * as S from "./index.style";
+import * as S from "./06-01.style";
 
 export default function Weather() {
   const [movies, setMovies] = useState([]);
@@ -51,55 +51,57 @@ export default function Weather() {
   const handleRatingChange = (newRating) => {};
 
   return (
-    <S.Main className="grid-container">
-      {movies.map((movie) => (
-        <S.Item key={movie.id} className="grid-item">
-          <S.Img
-            src={movie.medium_cover_image}
-            alt={movie.title}
-            onError={(event) => {
-              event.target.style.display = "none";
-            }}
-            onClick={() => handleMovieClick(movie)}
-          />
-        </S.Item>
-      ))}
-      {selectedMovie && (
-        <Modal
-          visible={modalVisible}
-          onCancel={handleModalClose}
-          footer={null}
-          destroyOnClose
-        >
-          <S.Tie>
-            <img
-              src={selectedMovie.medium_cover_image}
-              alt={selectedMovie.title}
+    <>
+      <S.Main className="grid-container">
+        {movies.map((movie) => (
+          <S.Item key={movie.id} className="grid-item">
+            <S.Img
+              src={movie.medium_cover_image}
+              alt={movie.title}
+              onError={(event) => {
+                event.target.style.display = "none";
+              }}
+              onClick={() => handleMovieClick(movie)}
             />
-            <S.TextTie>
-              <S.P1>제목 : {selectedMovie.title}</S.P1>
-              <S.P1>개봉일 : {selectedMovie.year}년</S.P1>
-              <S.P1>장르 : {selectedMovie.genres[0]}</S.P1>
-              <S.RateTie>
-                <ReactStars
-                  count={5}
-                  size={20}
-                  half={false}
-                  value={selectedMovie.rating / 2}
-                  emptyIcon={<i className="far fa-star"></i>}
-                  fullIcon={<i className="fa fa-star"></i>}
-                  onChange={handleRatingChange}
-                />
-                <S.P1 style={{ marginBottom: "11px", marginLeft: "10px" }}>
-                  {selectedMovie.rating} / 10
-                </S.P1>
-              </S.RateTie>
-              <S.P1>{truncateSummary(selectedMovie.summary, 150)}</S.P1>
-              <S.Button onClick={handleMoreButtonClick}>더보기</S.Button>
-            </S.TextTie>
-          </S.Tie>
-        </Modal>
-      )}
-    </S.Main>
+          </S.Item>
+        ))}
+        {selectedMovie && (
+          <Modal
+            visible={modalVisible}
+            onCancel={handleModalClose}
+            footer={null}
+            destroyOnClose
+          >
+            <S.Tie>
+              <img
+                src={selectedMovie.medium_cover_image}
+                alt={selectedMovie.title}
+              />
+              <S.TextTie>
+                <S.P1>제목 : {selectedMovie.title}</S.P1>
+                <S.P1>개봉일 : {selectedMovie.year}년</S.P1>
+                <S.P1>장르 : {selectedMovie.genres[0]}</S.P1>
+                <S.RateTie>
+                  <ReactStars
+                    count={5}
+                    size={20}
+                    half={false}
+                    value={selectedMovie.rating / 2}
+                    emptyIcon={<i className="far fa-star"></i>}
+                    fullIcon={<i className="fa fa-star"></i>}
+                    onChange={handleRatingChange}
+                  />
+                  <S.P1 style={{ marginBottom: "11px", marginLeft: "10px" }}>
+                    {selectedMovie.rating} / 10
+                  </S.P1>
+                </S.RateTie>
+                <S.P1>{truncateSummary(selectedMovie.summary, 150)}</S.P1>
+                <S.Button onClick={handleMoreButtonClick}>더보기</S.Button>
+              </S.TextTie>
+            </S.Tie>
+          </Modal>
+        )}
+      </S.Main>
+    </>
   );
 }

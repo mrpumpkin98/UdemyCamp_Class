@@ -5,9 +5,9 @@ export default function Footer() {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    border: 1px solid black;
     height: 200px;
+    background-color: #f0f0f0;
+    color: #333;
   `;
 
   return (
