@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { Modal } from "antd";
 import ReactStars from "react-stars";
-import * as S from "./06-01.style";
+import * as S from "./Movie.style";
 
 export default function Weather() {
   const [movies, setMovies] = useState([]);
