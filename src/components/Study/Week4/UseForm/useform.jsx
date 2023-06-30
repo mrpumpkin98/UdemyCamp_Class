@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import { useEffect } from "react";
+import io from "socket.io-client";
 
 const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+`;
+
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +48,19 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledValueButton = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #2c7ed6;
+  }
+`;
+
 const Line = styled.div`
   width: 100%;
   height: 1px;
@@ -49,6 +71,7 @@ const Line = styled.div`
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [value, setValue] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,6 +79,10 @@ export default function LoginForm() {
     // 예: 서버에 로그인 요청 보내기, 상태 업데이트 등
     console.log("Email:", email);
     console.log("Password:", password);
+  };
+
+  const handleIncrement = () => {
+    setValue(value + 1);
   };
 
   return (
@@ -80,6 +107,11 @@ export default function LoginForm() {
         <StyledButton type="submit">로그인</StyledButton>
       </StyledForm>
       <Line />
+      <Wrapper>
+        <p>값: {value}</p>
+        <StyledValueButton onClick={handleIncrement}>+1</StyledValueButton>
+        <Line />
+      </Wrapper>
     </>
   );
 }

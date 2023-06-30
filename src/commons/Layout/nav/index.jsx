@@ -36,8 +36,9 @@ export default function Nav() {
     <nav>
       <Ul>
         <Li onClick={() => handleClick("/")}>HOME</Li>
-        <Li onClick={() => handleClick("/MoviePage")}>Movie app 만들기</Li>
+        <Li onClick={() => handleClick("/MoviePage")}>MOVIE</Li>
         <Li onClick={() => handleClick("/Week4Page")}>Week:4</Li>
+        <Li onClick={() => handleClick("/ChatPage")}>CHAT</Li>
       </Ul>
     </nav>
   );
