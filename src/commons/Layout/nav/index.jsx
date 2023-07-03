@@ -39,6 +39,7 @@ export default function Nav() {
         <Li onClick={() => handleClick("/MoviePage")}>MOVIE</Li>
         <Li onClick={() => handleClick("/Week4Page")}>Week:4</Li>
         <Li onClick={() => handleClick("/ChatPage")}>CHAT</Li>
+        <Li onClick={() => handleClick("/Redux")}>Redux</Li>
       </Ul>
     </nav>
   );
