@@ -5,6 +5,7 @@ import {
   setLoggedOut,
   setCountUp,
   setCountDown,
+  setCountReset,
 } from "../../commons/store";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "@emotion/styled";
@@ -61,6 +62,10 @@ const SomeComponent = () => {
     bb(setCountDown());
   };
 
+  const handleButtonClick5 = () => {
+    bb(setCountReset());
+  };
+
   const { auth, counter } = useSelector((aaa) => aaa); // aaa에 어떤 값이 들어와도 상관X
   return (
     <>
@@ -73,6 +78,7 @@ const SomeComponent = () => {
         <Title>카운터 : {counter.isCounter}</Title>
         <Button onClick={handleButtonClick3}>증가</Button>
         <Button onClick={handleButtonClick4}>감소</Button>
+        <Button onClick={handleButtonClick5}>초기화</Button>
       </Container>
     </>
   );

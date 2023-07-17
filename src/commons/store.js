@@ -25,6 +25,12 @@ export const setCountDown = () => {
   };
 };
 
+export const setCountReset = () => {
+  return {
+    type: "SET_COUNT_RESET",
+  };
+};
+
 // 로그인 상태를 관리하는 Reducer
 const authReducer = (state = { isLoggedIn: false }, action) => {
   switch (action.type) {
@@ -54,6 +60,11 @@ const counter = (count = { isCounter: 0 }, action) => {
       return {
         ...count,
         isCounter: count.isCounter - 1,
+      };
+    case "SET_COUNT_RESET":
+      return {
+        ...count,
+        isCounter: (count.isCounter = 0),
       };
     default:
       return count;

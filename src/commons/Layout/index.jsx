@@ -6,7 +6,7 @@ import Nav from "./nav/index";
 export default function Layout(props) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       {props.children}
       {/* <Footer /> */}
     </>
